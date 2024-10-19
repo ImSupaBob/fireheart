@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7rb5co5d2bpu"]
+
+[ext_resource type="Texture2D" uid="uid://n2kaoo5wrn0h" path="res://Assets/Hero/hero.png" id="1_5jb5a"]
+[ext_resource type="Script" path="res://Script/Hero/hero.gd" id="1_7s87e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxjxf"]
+size = Vector2(32, 32)
+
+[sub_resource type="Animation" id="Animation_pv3jb"]
+resource_name = "Idel"
+length = 8.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_lukl0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ayesi"]
+_data = {
+"Idel": SubResource("Animation_pv3jb"),
+"RESET": SubResource("Animation_lukl0")
+}
+
+[node name="Hero" type="CharacterBody2D"]
+script = ExtResource("1_7s87e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fxjxf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5jb5a")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ayesi")
+}
+autoplay = "Idel"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 16)
+collision_mask = 2
+collide_with_areas = true
+collide_with_bodies = false

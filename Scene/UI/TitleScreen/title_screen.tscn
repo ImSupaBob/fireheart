@@ -9,7 +9,7 @@ script = ExtResource("1_ef371")
 position = Vector2(320, 256)
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+color = Color(0.0964817, 0.042167, 1.20327e-08, 1)
 polygon = PackedVector2Array(0, 0, 640, 0, 640, 512, 0, 512)
 
 [node name="Control" type="Control" parent="."]
@@ -34,5 +34,7 @@ grow_vertical = 2
 
 [node name="Title" type="Label" parent="Control/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.196078, 0.254902, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.509804, 0, 1)
 theme_override_font_sizes/font_size = 54
 text = "Fireheart"
