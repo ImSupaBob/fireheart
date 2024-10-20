@@ -9,7 +9,7 @@ size = Vector2(32, 32)
 
 [sub_resource type="Gradient" id="Gradient_54o0u"]
 offsets = PackedFloat32Array(0, 0.96129)
-colors = PackedColorArray(0.637954, 0.477774, 0, 1, 0, 0, 0, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_f8rje"]
 gradient = SubResource("Gradient_54o0u")
@@ -58,6 +58,7 @@ _data = {
 }
 
 [node name="Hero" type="CharacterBody2D"]
+z_index = 5
 script = ExtResource("1_7s87e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -69,7 +70,8 @@ hframes = 8
 
 [node name="TorchLight" type="PointLight2D" parent="Sprite2D"]
 unique_name_in_owner = true
-energy = 5.04
+color = Color(0.85098, 0.858824, 0.854902, 1)
+energy = 0.5
 shadow_enabled = true
 shadow_item_cull_mask = 3
 texture = SubResource("GradientTexture2D_f8rje")
