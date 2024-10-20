@@ -1,10 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://b7rb5co5d2bpu"]
+[gd_scene load_steps=10 format=3 uid="uid://b7rb5co5d2bpu"]
 
 [ext_resource type="Texture2D" uid="uid://n2kaoo5wrn0h" path="res://Assets/Hero/hero.png" id="1_5jb5a"]
 [ext_resource type="Script" path="res://Script/Hero/hero.gd" id="1_7s87e"]
+[ext_resource type="AudioStream" uid="uid://bk11t6rg108pj" path="res://Assets/Audio/Chop.wav" id="3_1ya5h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxjxf"]
 size = Vector2(32, 32)
+
+[sub_resource type="Gradient" id="Gradient_54o0u"]
+offsets = PackedFloat32Array(0, 0.96129)
+colors = PackedColorArray(0.637954, 0.477774, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f8rje"]
+gradient = SubResource("Gradient_54o0u")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+metadata/_snap_enabled = true
 
 [sub_resource type="Animation" id="Animation_pv3jb"]
 resource_name = "Idel"
@@ -55,6 +67,13 @@ shape = SubResource("RectangleShape2D_fxjxf")
 texture = ExtResource("1_5jb5a")
 hframes = 8
 
+[node name="TorchLight" type="PointLight2D" parent="Sprite2D"]
+unique_name_in_owner = true
+energy = 5.04
+shadow_enabled = true
+shadow_item_cull_mask = 3
+texture = SubResource("GradientTexture2D_f8rje")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ayesi")
@@ -65,4 +84,6 @@ autoplay = "Idel"
 target_position = Vector2(0, 16)
 collision_mask = 2
 collide_with_areas = true
-collide_with_bodies = false
+
+[node name="ChopSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1ya5h")

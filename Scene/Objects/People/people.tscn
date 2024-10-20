@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dg24opoqgdsnl"]
+
+[ext_resource type="Texture2D" uid="uid://bguif4ydxmai3" path="res://Assets/People/people.png" id="1_8787q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwa76"]
+size = Vector2(32, 32)
+
+[sub_resource type="Gradient" id="Gradient_k0ha0"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ehy01"]
+gradient = SubResource("Gradient_k0ha0")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[node name="People" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dwa76")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8787q")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = SubResource("GradientTexture2D_ehy01")

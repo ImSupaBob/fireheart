@@ -1,10 +1,20 @@
+class_name Hero
 extends CharacterBody2D
 
 @onready var tile_map : TileMap = $"../TileMap"
 @onready var sprite_2d = $Sprite2D
 @onready var ray_cast_2d = $RayCast2D
+@onready var chop_sound = $ChopSound
+@onready var torch_light = %TorchLight
+
+@export var light_range : int = 4
+
+var torch_durability : int = 3
 
 var is_moving = false
+
+func _ready():
+	torch_light.texture_scale = light_range
 
 func _physics_process(delta):
 	if not is_moving:
@@ -17,6 +27,7 @@ func _physics_process(delta):
 	sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 2)
 
 func _process(delta):
+	
 	if is_moving:
 		return
 	
@@ -47,7 +58,11 @@ func move(direction: Vector2):
 	
 	var collid_area = ray_cast_2d.get_collider()
 	
-	if ray_cast_2d.is_colliding():
+	if collid_area is Area2D:
+		return
+	elif collid_area is WoodenTree:
+		collid_area.chop()
+		chop_sound.play(0.0)
 		return
 	
 	is_moving = true
