@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtealpr25fgpc"]
+[gd_scene load_steps=8 format=3 uid="uid://dtealpr25fgpc"]
 
 [ext_resource type="PackedScene" uid="uid://cxjci7y7s4d07" path="res://Scene/Levels/base_level.tscn" id="1_iovmp"]
 [ext_resource type="PackedScene" uid="uid://dg24opoqgdsnl" path="res://Scene/Objects/People/people.tscn" id="2_goodi"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bi0lifvjmftj4" path="res://Scene/Levels/Level2/level_2.tscn" id="4_3ugay"]
 [ext_resource type="PackedScene" uid="uid://cnw0wfmvsn0es" path="res://Scene/Objects/Tree/tree.tscn" id="4_h1d1j"]
 [ext_resource type="PackedScene" uid="uid://vgh1alvi4v25" path="res://Scene/Objects/Rain/rain.tscn" id="5_r6gfa"]
+[ext_resource type="PackedScene" uid="uid://b7rb5co5d2bpu" path="res://Scene/Hero/hero.tscn" id="7_jy1yt"]
 
 [node name="Level1" instance=ExtResource("1_iovmp")]
 
@@ -15,40 +16,40 @@ layer_0/tile_data = PackedInt32Array(0, 65536, 1, 65536, 65536, 1, 131072, 65536
 [node name="TileMap2" parent="." index="1"]
 layer_0/tile_data = PackedInt32Array(917506, 393216, 1, 983042, 327680, 9, 917507, 262144, 1, 917508, 262144, 1, 983044, 327680, 9, 983043, 327680, 9, 983045, 262144, 1, 983046, 327680, 9, 983047, 327680, 9, 917509, 262144, 1, 917510, 393216, 1, 917511, 262144, 1, 983048, 393216, 1, 917512, 262144, 1, 917513, 327680, 9, 983050, 327680, 9, 983049, 262144, 1, 917514, 393216, 1, 917515, 262144, 1, 983051, 262144, 1, 983052, 393216, 1, 1048588, 262144, 1, 1048587, 393216, 1, 1048586, 393216, 1, 1114123, 262144, 1, 1114122, 393216, 1, 1114124, 262144, 1, 1114125, 393216, 1, 1048589, 262144, 1, 983053, 327680, 9, 917517, 393216, 1, 917516, 393216, 1, 1048590, 393216, 1, 1048591, 393216, 1, 1114126, 327680, 9, 1114127, 327680, 9, 1114128, 327680, 9, 1114129, 327680, 9, 1048593, 262144, 1, 1048594, 262144, 1, 1048595, 262144, 1, 1048592, 327680, 9, 1114130, 327680, 9, 1114131, 262144, 1, 1114132, 327680, 9, 1048596, 327680, 9, 1048597, 393216, 1, 983061, 327680, 9, 983060, 393216, 1, 1114133, 262144, 1, 917525, 262144, 1, 917524, 327680, 9, 851988, 262144, 1, 851989, 262144, 1, 786453, 327680, 9, 786452, 393216, 1, 786451, 327680, 9, 851987, 327680, 9, 851986, 327680, 9, 786450, 393216, 1, 720914, 327680, 9, 720915, 327680, 9, 655379, 327680, 9, 655378, 393216, 1, 655377, 327680, 9, 720913, 262144, 1, 720912, 327680, 9, 655376, 262144, 1, 589840, 327680, 9, 589841, 327680, 9, 524305, 262144, 1, 458769, 393216, 1, 458768, 393216, 1, 524304, 262144, 1, 393233, 327680, 9, 327697, 262144, 1, 327696, 393216, 1, 262160, 327680, 9, 262161, 393216, 1, 262162, 327680, 9, 262163, 327680, 9, 262164, 262144, 1, 327699, 393216, 1, 327698, 327680, 9, 327700, 262144, 1, 327701, 262144, 1, 262165, 327680, 9, 917526, 262144, 1, 917527, 327680, 9, 917528, 262144, 1, 917529, 262144, 1, 917530, 393216, 1, 917531, 327680, 9, 917532, 327680, 9, 917533, 327680, 9, 983069, 262144, 1, 983068, 393216, 1, 983067, 262144, 1, 983066, 393216, 1, 983065, 327680, 9, 983064, 262144, 1, 983063, 327680, 9, 983062, 393216, 1, 1048604, 327680, 9, 1114140, 262144, 1, 1114141, 262144, 1, 1114142, 262144, 1, 1114143, 262144, 1, 1114144, 327680, 9, 1114145, 262144, 1, 1048609, 262144, 1, 1048610, 327680, 9, 1048611, 262144, 1, 1048612, 327680, 9, 1048613, 327680, 9, 1114149, 262144, 1, 1114148, 327680, 9, 1114147, 393216, 1, 1114146, 393216, 1, 1048607, 327680, 9, 1048608, 393216, 1, 1048606, 262144, 1, 1048605, 393216, 1, 1048614, 327680, 9, 1048615, 327680, 9, 1114151, 393216, 1, 1114150, 262144, 1)
 
-[node name="Hero" parent="." index="2"]
-position = Vector2(48, 240)
-
-[node name="DirectionalLight2D" parent="." index="4"]
+[node name="DirectionalLight2D" parent="." index="3"]
 visible = true
 
-[node name="People" parent="." index="6" instance=ExtResource("2_goodi")]
+[node name="People" parent="." index="5" instance=ExtResource("2_goodi")]
 position = Vector2(16, 240)
 
-[node name="Exit" parent="." index="7" instance=ExtResource("3_lp5l7")]
+[node name="Exit" parent="." index="6" instance=ExtResource("3_lp5l7")]
 position = Vector2(624, 272)
 rotation = 1.5708
 load_scene = ExtResource("4_3ugay")
 
-[node name="Tree" parent="." index="8" instance=ExtResource("4_h1d1j")]
+[node name="Tree" parent="." index="7" instance=ExtResource("4_h1d1j")]
 position = Vector2(176, 272)
 
-[node name="Rain" parent="." index="9" instance=ExtResource("5_r6gfa")]
+[node name="Rain" parent="." index="8" instance=ExtResource("5_r6gfa")]
 position = Vector2(336, 208)
 
-[node name="Rain2" parent="." index="10" instance=ExtResource("5_r6gfa")]
+[node name="Rain2" parent="." index="9" instance=ExtResource("5_r6gfa")]
 position = Vector2(304, 208)
 
-[node name="Rain3" parent="." index="11" instance=ExtResource("5_r6gfa")]
+[node name="Rain3" parent="." index="10" instance=ExtResource("5_r6gfa")]
 position = Vector2(304, 176)
 
-[node name="Rain4" parent="." index="12" instance=ExtResource("5_r6gfa")]
+[node name="Rain4" parent="." index="11" instance=ExtResource("5_r6gfa")]
 position = Vector2(272, 176)
 
-[node name="Rain5" parent="." index="13" instance=ExtResource("5_r6gfa")]
+[node name="Rain5" parent="." index="12" instance=ExtResource("5_r6gfa")]
 position = Vector2(272, 144)
 
-[node name="Rain6" parent="." index="14" instance=ExtResource("5_r6gfa")]
+[node name="Rain6" parent="." index="13" instance=ExtResource("5_r6gfa")]
 position = Vector2(272, 112)
 
-[node name="Rain7" parent="." index="15" instance=ExtResource("5_r6gfa")]
+[node name="Rain7" parent="." index="14" instance=ExtResource("5_r6gfa")]
 position = Vector2(272, 80)
+
+[node name="Hero" parent="." index="15" instance=ExtResource("7_jy1yt")]
+position = Vector2(48, 240)

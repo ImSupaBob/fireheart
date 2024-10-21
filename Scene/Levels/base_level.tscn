@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxjci7y7s4d07"]
+[gd_scene load_steps=4 format=3 uid="uid://cxjci7y7s4d07"]
 
 [ext_resource type="TileSet" uid="uid://c5a0s2uhaxvx7" path="res://BUGFIX/Tile1.tres" id="1_75ccs"]
 [ext_resource type="TileSet" uid="uid://cy4mbkf8xrq6u" path="res://BUGFIX/Tile2.tres" id="2_msgtt"]
-[ext_resource type="PackedScene" uid="uid://b7rb5co5d2bpu" path="res://Scene/Hero/hero.tscn" id="3_l51ob"]
 [ext_resource type="PackedScene" uid="uid://do2wq606qgffj" path="res://Scene/Objects/Weather/weather.tscn" id="4_mvyjg"]
 
 [node name="BaseLevel" type="Node2D"]
@@ -15,12 +14,9 @@ format = 2
 tile_set = ExtResource("2_msgtt")
 format = 2
 
-[node name="Hero" parent="." instance=ExtResource("3_l51ob")]
-
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 blend_mode = 2
 shadow_enabled = true

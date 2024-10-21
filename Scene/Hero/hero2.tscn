@@ -7,22 +7,22 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxjxf"]
 size = Vector2(16, 16)
 
-[sub_resource type="Gradient" id="Gradient_ard02"]
+[sub_resource type="Gradient" id="Gradient_wk5fy"]
 colors = PackedColorArray(0.776334, 0, 0.145148, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_fyvol"]
-gradient = SubResource("Gradient_ard02")
+gradient = SubResource("Gradient_wk5fy")
 width = 8
 height = 8
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 metadata/_snap_enabled = true
 
-[sub_resource type="Gradient" id="Gradient_cagyx"]
+[sub_resource type="Gradient" id="Gradient_w6451"]
 colors = PackedColorArray(0.972549, 0.0745098, 0.160784, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_p7cnw"]
-gradient = SubResource("Gradient_cagyx")
+gradient = SubResource("Gradient_w6451")
 width = 256
 height = 256
 fill = 1

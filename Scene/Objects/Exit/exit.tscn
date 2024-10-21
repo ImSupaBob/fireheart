@@ -3,14 +3,13 @@
 [ext_resource type="Script" path="res://Script/Objects/Exit/exit.gd" id="1_ujp3p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wcwj2"]
-size = Vector2(32, 32)
+size = Vector2(64, 64)
 
-[sub_resource type="Gradient" id="Gradient_xy5ko"]
-offsets = PackedFloat32Array(0.23871, 1)
-colors = PackedColorArray(1, 0.0901961, 0.152941, 1, 0, 0, 0, 1)
+[sub_resource type="Gradient" id="Gradient_q20l0"]
+colors = PackedColorArray(0.749921, 0.0791646, 0.149748, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_rnaie"]
-gradient = SubResource("Gradient_xy5ko")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v4ut1"]
+gradient = SubResource("Gradient_q20l0")
 fill = 1
 fill_from = Vector2(0.5, 0)
 fill_to = Vector2(0.5, 1)
@@ -27,6 +26,6 @@ shape = SubResource("RectangleShape2D_wcwj2")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 energy = 3.0
 shadow_enabled = true
-texture = SubResource("GradientTexture2D_rnaie")
+texture = SubResource("GradientTexture2D_v4ut1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dcxpaviwvmvw4"]
+[gd_scene load_steps=10 format=3 uid="uid://dcxpaviwvmvw4"]
 
 [ext_resource type="PackedScene" uid="uid://cxjci7y7s4d07" path="res://Scene/Levels/base_level.tscn" id="1_n5g10"]
 [ext_resource type="PackedScene" uid="uid://dg24opoqgdsnl" path="res://Scene/Objects/People/people.tscn" id="2_7kvh4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bawmkwthnoo7a" path="res://Scene/Levels/Level7/level_7.tscn" id="4_cg4nr"]
 [ext_resource type="PackedScene" uid="uid://vgh1alvi4v25" path="res://Scene/Objects/Rain/rain.tscn" id="4_gboug"]
 [ext_resource type="PackedScene" uid="uid://lm1micaark0q" path="res://Scene/Objects/Stick/stick.tscn" id="5_d4tc8"]
+[ext_resource type="PackedScene" uid="uid://b7rb5co5d2bpu" path="res://Scene/Hero/hero.tscn" id="7_whnac"]
 
 [sub_resource type="Gradient" id="Gradient_7xqj1"]
 colors = PackedColorArray(0.18002, 0.617227, 1, 1, 0, 0, 0, 1)
@@ -27,174 +28,174 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 1, 65536, 196608, 1, 131072, 196
 [node name="TileMap2" parent="." index="1"]
 layer_0/tile_data = PackedInt32Array(262160, 327680, 9, 327696, 131072, 9, 393232, 327680, 9, 458768, 393216, 1, 524304, 524288, 11, 589840, 524288, 11, 655376, 393216, 1, 720912, 393216, 1, 786448, 524288, 11, 851984, 327680, 9, 917520, 393216, 1, 983056, 393216, 1, 1048592, 131072, 9, 1114128, 524288, 11, 1179664, 393216, 1, 1245200, 131072, 9, 1310736, 393216, 1, 1376272, 327680, 9, 1441808, 393216, 1, 1507344, 393216, 1, 1572880, 393216, 1, 1638416, 327680, 9, 1703952, 524288, 11, 1769488, 393216, 1, 262161, 131072, 9, 327697, 327680, 9, 393233, 524288, 11, 458769, 327680, 9, 524305, 327680, 9, 589841, 524288, 11, 655377, 327680, 9, 720913, 131072, 9, 786449, 393216, 1, 851985, 131072, 9, 917521, 327680, 9, 983057, 327680, 9, 1048593, 327680, 9, 1114129, 131072, 9, 1179665, 131072, 9, 1245201, 327680, 9, 1310737, 524288, 11, 1376273, 393216, 1, 1441809, 524288, 11, 1507345, 131072, 9, 1572881, 524288, 11, 1638417, 524288, 11, 1703953, 393216, 1, 1769489, 131072, 9, 262162, 524288, 11, 327698, 131072, 9, 393234, 524288, 11, 458770, 393216, 1, 524306, 524288, 11, 589842, 327680, 9, 655378, 393216, 1, 720914, 131072, 9, 786450, 131072, 9, 851986, 393216, 1, 917522, 524288, 11, 983058, 327680, 9, 1048594, 393216, 1, 1114130, 393216, 1, 1179666, 524288, 11, 1245202, 131072, 9, 1310738, 524288, 11, 1376274, 131072, 9, 1441810, 327680, 9, 1507346, 131072, 9, 1572882, 524288, 11, 1638418, 393216, 1, 1703954, 131072, 9, 1769490, 524288, 11, 262163, 131072, 9, 327699, 131072, 9, 393235, 524288, 11, 458771, 327680, 9, 524307, 327680, 9, 589843, 393216, 1, 655379, 131072, 9, 720915, 327680, 9, 786451, 327680, 9, 851987, 327680, 9, 917523, 393216, 1, 983059, 327680, 9, 1048595, 393216, 1, 1114131, 393216, 1, 1179667, 524288, 11, 1245203, 524288, 11, 1310739, 524288, 11, 1376275, 524288, 11, 1441811, 524288, 11, 1507347, 524288, 11, 1572883, 327680, 9, 1638419, 327680, 9, 1703955, 393216, 1, 1769491, 131072, 9, 262164, 524288, 11, 327700, 393216, 1, 393236, 327680, 9, 458772, 131072, 9, 524308, 131072, 9, 589844, 327680, 9, 655380, 131072, 9, 720916, 327680, 9, 786452, 327680, 9, 851988, 131072, 9, 917524, 327680, 9, 983060, 327680, 9, 1048596, 524288, 11, 1114132, 393216, 1, 1179668, 327680, 9, 1245204, 131072, 9, 1310740, 131072, 9, 1376276, 327680, 9, 1441812, 524288, 11, 1507348, 524288, 11, 1572884, 327680, 9, 1638420, 327680, 9, 1703956, 327680, 9, 1769492, 524288, 11, 262165, 393216, 1, 327701, 524288, 11, 393237, 524288, 11, 458773, 131072, 9, 524309, 524288, 11, 589845, 327680, 9, 655381, 524288, 11, 720917, 393216, 1, 786453, 393216, 1, 851989, 131072, 9, 917525, 327680, 9, 983061, 393216, 1, 1048597, 131072, 9, 1114133, 327680, 9, 1179669, 327680, 9, 1245205, 327680, 9, 1310741, 524288, 11, 1376277, 131072, 9, 1441813, 524288, 11, 1507349, 393216, 1, 1572885, 393216, 1, 1638421, 524288, 11, 1703957, 524288, 11, 1769493, 131072, 9, 262166, 393216, 1, 327702, 524288, 11, 393238, 131072, 9, 458774, 393216, 1, 524310, 524288, 11, 589846, 393216, 1, 655382, 393216, 1, 720918, 393216, 1, 786454, 524288, 11, 851990, 393216, 1, 917526, 393216, 1, 983062, 393216, 1, 1048598, 393216, 1, 1114134, 327680, 9, 1179670, 131072, 9, 1245206, 131072, 9, 1310742, 327680, 9, 1376278, 327680, 9, 1441814, 327680, 9, 1507350, 327680, 9, 1572886, 131072, 9, 1638422, 393216, 1, 1703958, 393216, 1, 1769494, 131072, 9, 262167, 524288, 11, 327703, 524288, 11, 393239, 131072, 9, 458775, 131072, 9, 524311, 327680, 9, 589847, 131072, 9, 655383, 524288, 11, 720919, 131072, 9, 786455, 393216, 1, 851991, 393216, 1, 917527, 393216, 1, 983063, 393216, 1, 1048599, 327680, 9, 1114135, 131072, 9, 1179671, 393216, 1, 1245207, 393216, 1, 1310743, 393216, 1, 1376279, 393216, 1, 1441815, 327680, 9, 1507351, 131072, 9, 1572887, 393216, 1, 1638423, 327680, 9, 1703959, 327680, 9, 1769495, 524288, 11, 131094, 393216, 1, 196630, 131072, 9, 131095, 393216, 1, 196631, 327680, 9, 262168, 393216, 1, 327704, 524288, 11, 393240, 131072, 9, 458776, 524288, 11, 262169, 393216, 1, 327705, 393216, 1, 393241, 327680, 9, 458777, 524288, 11, 262170, 393216, 1, 327706, 131072, 9, 393242, 131072, 9, 458778, 393216, 1, 262171, 524288, 11, 327707, 393216, 1, 393243, 393216, 1, 458779, 131072, 9, 524314, 524288, 11, 589850, 131072, 9, 655386, 327680, 9, 720922, 327680, 9, 524315, 327680, 9, 589851, 524288, 11, 655387, 524288, 11, 720923, 393216, 1, 393244, 524288, 11, 458780, 131072, 9, 524316, 524288, 11, 589852, 131072, 9, 655388, 524288, 11, 720924, 327680, 9, 393245, 131072, 9, 458781, 327680, 9, 524317, 131072, 9, 589853, 524288, 11, 655389, 524288, 11, 720925, 327680, 9, 393246, 393216, 1, 458782, 131072, 9, 524318, 131072, 9, 589854, 393216, 1, 655390, 327680, 9, 720926, 327680, 9, 393247, 327680, 9, 458783, 524288, 11, 524319, 393216, 1, 589855, 327680, 9, 655391, 393216, 1, 720927, 524288, 11, 524320, 524288, 11, 589856, 131072, 9, 655392, 393216, 1, 720928, 131072, 9, 524321, 131072, 9, 589857, 327680, 9, 655393, 393216, 1, 720929, 131072, 9, 524322, 327680, 9, 589858, 524288, 11, 655394, 327680, 9, 720930, 131072, 9, 524323, 327680, 9, 589859, 131072, 9, 655395, 524288, 11, 720931, 524288, 11, 262174, 327680, 9, 327710, 131072, 9, 262175, 131072, 9, 327711, 327680, 9, 262176, 327680, 9, 327712, 131072, 9, 262177, 524288, 11, 327713, 327680, 9, 262178, 131072, 9, 327714, 131072, 9, 262179, 131072, 9, 327715, 524288, 11, 262180, 131072, 9, 327716, 393216, 1, 262181, 131072, 9, 327717, 524288, 11, 262182, 327680, 9, 327718, 131072, 9, 262183, 131072, 9, 327719, 393216, 1, 393254, 131072, 9, 458790, 327680, 9, 524326, 524288, 11, 589862, 327680, 9, 655398, 524288, 11, 720934, 131072, 9, 786470, 393216, 1, 852006, 131072, 9, 917542, 393216, 1, 983078, 327680, 9, 1048614, 327680, 9, 1114150, 524288, 11, 1179686, 327680, 9, 1245222, 131072, 9, 1310758, 131072, 9, 1376294, 393216, 1, 1441830, 524288, 11, 1507366, 524288, 11, 1572902, 131072, 9, 1638438, 393216, 1, 1703974, 327680, 9, 1769510, 131072, 9, 1835046, 327680, 9, 1900582, 393216, 1, 393255, 524288, 11, 458791, 131072, 9, 524327, 393216, 1, 589863, 327680, 9, 655399, 327680, 9, 720935, 393216, 1, 786471, 327680, 9, 852007, 131072, 9, 917543, 393216, 1, 983079, 131072, 9, 1048615, 393216, 1, 1114151, 327680, 9, 1179687, 393216, 1, 1245223, 327680, 9, 1310759, 327680, 9, 1376295, 524288, 11, 1441831, 327680, 9, 1507367, 327680, 9, 1572903, 327680, 9, 1638439, 327680, 9, 1703975, 393216, 1, 1769511, 327680, 9, 1835047, 393216, 1, 1900583, 131072, 9, 1835042, 131072, 9, 1900578, 131072, 9, 1835043, 327680, 9, 1900579, 131072, 9, 1835044, 131072, 9, 1900580, 131072, 9, 1835045, 327680, 9, 1900581, 393216, 1, 1441826, 131072, 9, 1507362, 327680, 9, 1441827, 393216, 1, 1507363, 524288, 11, 1441828, 393216, 1, 1507364, 524288, 11, 1441829, 131072, 9, 1507365, 524288, 11, 1048610, 524288, 11, 1114146, 131072, 9, 1179682, 524288, 11, 1245218, 131072, 9, 1310754, 131072, 9, 1376290, 327680, 9, 1048611, 327680, 9, 1114147, 524288, 11, 1179683, 393216, 1, 1245219, 393216, 1, 1310755, 393216, 1, 1376291, 131072, 9, 1048612, 131072, 9, 1114148, 327680, 9, 1048613, 393216, 1, 1114149, 131072, 9, 917528, 327680, 9, 983064, 131072, 9, 1048600, 131072, 9, 1114136, 393216, 1, 917529, 327680, 9, 983065, 131072, 9, 1048601, 393216, 1, 1114137, 131072, 9, 917530, 524288, 11, 983066, 131072, 9, 1048602, 524288, 11, 1114138, 131072, 9, 917531, 393216, 1, 983067, 393216, 1, 1048603, 393216, 1, 1114139, 393216, 1, 917532, 131072, 9, 983068, 524288, 11, 1048604, 393216, 1, 1114140, 327680, 9, 917533, 327680, 9, 983069, 131072, 9, 1048605, 131072, 9, 1114141, 393216, 1, 917534, 327680, 9, 983070, 524288, 11, 1048606, 131072, 9, 1114142, 131072, 9, 917535, 393216, 1, 983071, 131072, 9, 1048607, 524288, 11, 1114143, 524288, 11, 917536, 393216, 1, 983072, 524288, 11, 1048608, 524288, 11, 1114144, 327680, 9, 917537, 327680, 9, 983073, 327680, 9, 1048609, 327680, 9, 1114145, 327680, 9, 786464, 393216, 1, 852000, 327680, 9, 786465, 393216, 1, 852001, 393216, 1, 1179674, 524288, 11, 1245210, 393216, 1, 1310746, 393216, 1, 1376282, 524288, 11, 1179675, 327680, 9, 1245211, 131072, 9, 1310747, 524288, 11, 1376283, 131072, 9, 1310748, 393216, 1, 1376284, 393216, 1, 1310749, 131072, 9, 1376285, 327680, 9, 1310750, 131072, 9, 1376286, 524288, 11, 1310751, 131072, 9, 1376287, 327680, 9, 1441822, 393216, 1, 1507358, 327680, 9, 1572894, 131072, 9, 1638430, 393216, 1, 1441823, 393216, 1, 1507359, 327680, 9, 1572895, 131072, 9, 1638431, 393216, 1, 1572888, 131072, 9, 1638424, 393216, 1, 1572889, 524288, 11, 1638425, 524288, 11, 1572890, 393216, 1, 1638426, 524288, 11, 1572891, 524288, 11, 1638427, 524288, 11, 1572892, 393216, 1, 1638428, 393216, 1, 1572893, 393216, 1, 1638429, 131072, 9, 1441816, 327680, 9, 1507352, 327680, 9, 1703960, 327680, 9, 1769496, 393216, 1, 1441817, 131072, 9, 1507353, 131072, 9, 1703961, 524288, 11, 1769497, 524288, 11, 1572878, 393216, 1, 1638414, 393216, 1, 1703950, 524288, 11, 1572879, 524288, 11, 1638415, 327680, 9, 1703951, 393216, 1, 1441806, 524288, 11, 1507342, 393216, 1, 1769486, 393216, 1, 1441807, 393216, 1, 1507343, 327680, 9, 1769487, 327680, 9, 1703946, 327680, 9, 1769482, 327680, 9, 1835018, 327680, 9, 1900554, 524288, 11, 1703947, 131072, 9, 1769483, 524288, 11, 1835019, 393216, 1, 1900555, 327680, 9, 1703948, 327680, 9, 1769484, 393216, 1, 1835020, 131072, 9, 1900556, 393216, 1, 1703949, 393216, 1, 1769485, 327680, 9, 1835021, 131072, 9, 1900557, 393216, 1, 1835010, 327680, 9, 1900546, 131072, 9, 1835011, 131072, 9, 1900547, 393216, 1, 1835012, 393216, 1, 1900548, 327680, 9, 1835013, 524288, 11, 1900549, 131072, 9, 1835014, 327680, 9, 1900550, 131072, 9, 1835015, 393216, 1, 1900551, 393216, 1, 1835016, 524288, 11, 1900552, 393216, 1, 1835017, 524288, 11, 1900553, 327680, 9, 262146, 327680, 9, 327682, 131072, 9, 393218, 393216, 1, 458754, 524288, 11, 524290, 524288, 11, 589826, 131072, 9, 655362, 327680, 9, 720898, 327680, 9, 786434, 131072, 9, 851970, 524288, 11, 917506, 524288, 11, 983042, 131072, 9, 1048578, 393216, 1, 1114114, 327680, 9, 1179650, 131072, 9, 1245186, 131072, 9, 1310722, 393216, 1, 1376258, 327680, 9, 1441794, 327680, 9, 1507330, 393216, 1, 1572866, 131072, 9, 1638402, 131072, 9, 1703938, 524288, 11, 1769474, 131072, 9, 262147, 393216, 1, 327683, 393216, 1, 393219, 393216, 1, 458755, 393216, 1, 524291, 393216, 1, 589827, 524288, 11, 655363, 393216, 1, 720899, 393216, 1, 786435, 327680, 9, 851971, 327680, 9, 917507, 327680, 9, 983043, 131072, 9, 1048579, 327680, 9, 1114115, 327680, 9, 1179651, 524288, 11, 1245187, 131072, 9, 1310723, 327680, 9, 1376259, 393216, 1, 1441795, 524288, 11, 1507331, 524288, 11, 1572867, 524288, 11, 1638403, 524288, 11, 1703939, 327680, 9, 1769475, 131072, 9, 262150, 131072, 9, 327686, 327680, 9, 393222, 524288, 11, 458758, 131072, 9, 524294, 524288, 11, 589830, 327680, 9, 655366, 524288, 11, 720902, 393216, 1, 786438, 393216, 1, 851974, 524288, 11, 917510, 327680, 9, 983046, 131072, 9, 1048582, 327680, 9, 1114118, 327680, 9, 1179654, 524288, 11, 1245190, 393216, 1, 1310726, 524288, 11, 1376262, 524288, 11, 1441798, 393216, 1, 1507334, 393216, 1, 1572870, 393216, 1, 1638406, 524288, 11, 1703942, 131072, 9, 1769478, 131072, 9, 262151, 327680, 9, 327687, 131072, 9, 393223, 327680, 9, 458759, 327680, 9, 524295, 524288, 11, 589831, 393216, 1, 655367, 524288, 11, 720903, 131072, 9, 786439, 524288, 11, 851975, 327680, 9, 917511, 524288, 11, 983047, 131072, 9, 1048583, 393216, 1, 1114119, 131072, 9, 1179655, 131072, 9, 1245191, 524288, 11, 1310727, 393216, 1, 1376263, 131072, 9, 1441799, 393216, 1, 1507335, 327680, 9, 1572871, 524288, 11, 1638407, 524288, 11, 1703943, 524288, 11, 1769479, 131072, 9, 262154, 393216, 1, 327690, 327680, 9, 393226, 524288, 11, 458762, 131072, 9, 524298, 327680, 9, 589834, 327680, 9, 655370, 393216, 1, 720906, 393216, 1, 786442, 524288, 11, 851978, 131072, 9, 917514, 131072, 9, 983050, 327680, 9, 1048586, 327680, 9, 1114122, 524288, 11, 1179658, 327680, 9, 1245194, 524288, 11, 1310730, 393216, 1, 1376266, 131072, 9, 1441802, 131072, 9, 1507338, 524288, 11, 1572874, 131072, 9, 1638410, 131072, 9, 262155, 131072, 9, 327691, 327680, 9, 393227, 393216, 1, 458763, 131072, 9, 524299, 327680, 9, 589835, 524288, 11, 655371, 327680, 9, 720907, 327680, 9, 786443, 131072, 9, 851979, 393216, 1, 917515, 524288, 11, 983051, 327680, 9, 1048587, 524288, 11, 1114123, 131072, 9, 1179659, 393216, 1, 1245195, 393216, 1, 1310731, 131072, 9, 1376267, 393216, 1, 1441803, 524288, 11, 1507339, 131072, 9, 1572875, 131072, 9, 1638411, 393216, 1, 262148, 131072, 9, 327684, 327680, 9, 393220, 327680, 9, 458756, 393216, 1, 262149, 131072, 9, 327685, 393216, 1, 393221, 393216, 1, 458757, 393216, 1, 262152, 131072, 9, 327688, 524288, 11, 393224, 524288, 11, 458760, 393216, 1, 262153, 524288, 11, 327689, 131072, 9, 393225, 131072, 9, 458761, 393216, 1, 262156, 327680, 9, 327692, 524288, 11, 393228, 131072, 9, 458764, 524288, 11, 262157, 131072, 9, 327693, 393216, 1, 393229, 524288, 11, 458765, 327680, 9, 262158, 327680, 9, 327694, 327680, 9, 393230, 524288, 11, 458766, 524288, 11, 262159, 131072, 9, 327695, 393216, 1, 393231, 524288, 11, 458767, 327680, 9, 524292, 524288, 11, 589828, 131072, 9, 524293, 327680, 9, 589829, 131072, 9, 524296, 131072, 9, 589832, 524288, 11, 524297, 393216, 1, 589833, 524288, 11, 786436, 131072, 9, 851972, 524288, 11, 786437, 327680, 9, 851973, 327680, 9, 786440, 131072, 9, 851976, 524288, 11, 786441, 327680, 9, 851977, 393216, 1, 1048580, 524288, 11, 1114116, 393216, 1, 1048581, 524288, 11, 1114117, 524288, 11, 1048584, 131072, 9, 1114120, 131072, 9, 1048585, 393216, 1, 1114121, 524288, 11, 1310724, 524288, 11, 1376260, 393216, 1, 1310725, 393216, 1, 1376261, 393216, 1, 1310728, 393216, 1, 1376264, 327680, 9, 1310729, 524288, 11, 1376265, 524288, 11, 1572868, 327680, 9, 1638404, 393216, 1, 1572869, 327680, 9, 1638405, 131072, 9, 1572872, 393216, 1, 1638408, 131072, 9, 1572873, 524288, 11, 1638409, 524288, 11, 917516, 131072, 9, 983052, 393216, 1, 1048588, 393216, 1, 1114124, 131072, 9, 917517, 131072, 9, 983053, 393216, 1, 1048589, 524288, 11, 1114125, 524288, 11, 917518, 524288, 11, 983054, 327680, 9, 1048590, 131072, 9, 1114126, 524288, 11, 917519, 524288, 11, 983055, 524288, 11, 1048591, 524288, 11, 1114127, 327680, 9)
 
-[node name="Hero" parent="." index="2"]
-position = Vector2(304, 432)
-
-[node name="PointLight2D" type="PointLight2D" parent="." index="6"]
+[node name="PointLight2D" type="PointLight2D" parent="." index="5"]
 position = Vector2(320, 256)
 energy = 2.0
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_hf3yj")
 
-[node name="People" parent="." index="7" instance=ExtResource("2_7kvh4")]
+[node name="People" parent="." index="6" instance=ExtResource("2_7kvh4")]
 position = Vector2(304, 464)
 
-[node name="Exit" parent="." index="8" instance=ExtResource("3_wl0hu")]
+[node name="Exit" parent="." index="7" instance=ExtResource("3_wl0hu")]
 position = Vector2(368, 48)
 load_scene = ExtResource("4_cg4nr")
 
-[node name="Rain" parent="." index="9" instance=ExtResource("4_gboug")]
+[node name="Rain" parent="." index="8" instance=ExtResource("4_gboug")]
 position = Vector2(176, 368)
 
-[node name="Rain2" parent="." index="10" instance=ExtResource("4_gboug")]
+[node name="Rain2" parent="." index="9" instance=ExtResource("4_gboug")]
 position = Vector2(112, 304)
 
-[node name="Rain51" parent="." index="11" instance=ExtResource("4_gboug")]
+[node name="Rain51" parent="." index="10" instance=ExtResource("4_gboug")]
 position = Vector2(432, 400)
 
-[node name="Rain3" parent="." index="12" instance=ExtResource("4_gboug")]
+[node name="Rain3" parent="." index="11" instance=ExtResource("4_gboug")]
 position = Vector2(176, 400)
 
-[node name="Rain6" parent="." index="13" instance=ExtResource("4_gboug")]
+[node name="Rain6" parent="." index="12" instance=ExtResource("4_gboug")]
 position = Vector2(176, 144)
 
-[node name="Rain4" parent="." index="14" instance=ExtResource("4_gboug")]
+[node name="Rain4" parent="." index="13" instance=ExtResource("4_gboug")]
 position = Vector2(176, 112)
 
-[node name="Rain13" parent="." index="15" instance=ExtResource("4_gboug")]
+[node name="Rain13" parent="." index="14" instance=ExtResource("4_gboug")]
 position = Vector2(112, 176)
 
-[node name="Rain7" parent="." index="16" instance=ExtResource("4_gboug")]
+[node name="Rain7" parent="." index="15" instance=ExtResource("4_gboug")]
 position = Vector2(112, 368)
 
-[node name="Rain8" parent="." index="17" instance=ExtResource("4_gboug")]
+[node name="Rain8" parent="." index="16" instance=ExtResource("4_gboug")]
 position = Vector2(112, 400)
 
-[node name="Rain9" parent="." index="18" instance=ExtResource("4_gboug")]
+[node name="Rain9" parent="." index="17" instance=ExtResource("4_gboug")]
 position = Vector2(208, 208)
 
-[node name="Rain10" parent="." index="19" instance=ExtResource("4_gboug")]
+[node name="Rain10" parent="." index="18" instance=ExtResource("4_gboug")]
 position = Vector2(144, 272)
 
-[node name="Rain11" parent="." index="20" instance=ExtResource("4_gboug")]
+[node name="Rain11" parent="." index="19" instance=ExtResource("4_gboug")]
 position = Vector2(48, 304)
 
-[node name="Rain12" parent="." index="21" instance=ExtResource("4_gboug")]
+[node name="Rain12" parent="." index="20" instance=ExtResource("4_gboug")]
 position = Vector2(48, 176)
 
-[node name="Rain48" parent="." index="22" instance=ExtResource("4_gboug")]
+[node name="Rain48" parent="." index="21" instance=ExtResource("4_gboug")]
 position = Vector2(176, 176)
 
-[node name="Rain49" parent="." index="23" instance=ExtResource("4_gboug")]
+[node name="Rain49" parent="." index="22" instance=ExtResource("4_gboug")]
 position = Vector2(112, 144)
 
-[node name="Rain50" parent="." index="24" instance=ExtResource("4_gboug")]
+[node name="Rain50" parent="." index="23" instance=ExtResource("4_gboug")]
 position = Vector2(144, 144)
 
-[node name="Rain14" parent="." index="25" instance=ExtResource("4_gboug")]
+[node name="Rain14" parent="." index="24" instance=ExtResource("4_gboug")]
 position = Vector2(528, 208)
 
-[node name="Rain16" parent="." index="26" instance=ExtResource("4_gboug")]
+[node name="Rain16" parent="." index="25" instance=ExtResource("4_gboug")]
 position = Vector2(496, 80)
 
-[node name="Rain18" parent="." index="27" instance=ExtResource("4_gboug")]
+[node name="Rain18" parent="." index="26" instance=ExtResource("4_gboug")]
 position = Vector2(624, 80)
 
-[node name="Rain19" parent="." index="28" instance=ExtResource("4_gboug")]
+[node name="Rain19" parent="." index="27" instance=ExtResource("4_gboug")]
 position = Vector2(624, 112)
 
-[node name="Rain20" parent="." index="29" instance=ExtResource("4_gboug")]
+[node name="Rain20" parent="." index="28" instance=ExtResource("4_gboug")]
 position = Vector2(624, 144)
 
-[node name="Rain21" parent="." index="30" instance=ExtResource("4_gboug")]
+[node name="Rain21" parent="." index="29" instance=ExtResource("4_gboug")]
 position = Vector2(528, 80)
 
-[node name="Rain22" parent="." index="31" instance=ExtResource("4_gboug")]
+[node name="Rain22" parent="." index="30" instance=ExtResource("4_gboug")]
 position = Vector2(368, 176)
 
-[node name="Rain23" parent="." index="32" instance=ExtResource("4_gboug")]
+[node name="Rain23" parent="." index="31" instance=ExtResource("4_gboug")]
 position = Vector2(336, 176)
 
-[node name="Rain24" parent="." index="33" instance=ExtResource("4_gboug")]
+[node name="Rain24" parent="." index="32" instance=ExtResource("4_gboug")]
 position = Vector2(304, 176)
 
-[node name="Rain25" parent="." index="34" instance=ExtResource("4_gboug")]
+[node name="Rain25" parent="." index="33" instance=ExtResource("4_gboug")]
 position = Vector2(272, 176)
 
-[node name="Rain26" parent="." index="35" instance=ExtResource("4_gboug")]
+[node name="Rain26" parent="." index="34" instance=ExtResource("4_gboug")]
 position = Vector2(368, 208)
 
-[node name="Rain27" parent="." index="36" instance=ExtResource("4_gboug")]
+[node name="Rain27" parent="." index="35" instance=ExtResource("4_gboug")]
 position = Vector2(336, 208)
 
-[node name="Rain28" parent="." index="37" instance=ExtResource("4_gboug")]
+[node name="Rain28" parent="." index="36" instance=ExtResource("4_gboug")]
 position = Vector2(304, 208)
 
-[node name="Rain29" parent="." index="38" instance=ExtResource("4_gboug")]
+[node name="Rain29" parent="." index="37" instance=ExtResource("4_gboug")]
 position = Vector2(272, 208)
 
-[node name="Rain30" parent="." index="39" instance=ExtResource("4_gboug")]
+[node name="Rain30" parent="." index="38" instance=ExtResource("4_gboug")]
 position = Vector2(368, 240)
 
-[node name="Rain31" parent="." index="40" instance=ExtResource("4_gboug")]
+[node name="Rain31" parent="." index="39" instance=ExtResource("4_gboug")]
 position = Vector2(336, 240)
 
-[node name="Rain32" parent="." index="41" instance=ExtResource("4_gboug")]
+[node name="Rain32" parent="." index="40" instance=ExtResource("4_gboug")]
 position = Vector2(304, 240)
 
-[node name="Rain33" parent="." index="42" instance=ExtResource("4_gboug")]
+[node name="Rain33" parent="." index="41" instance=ExtResource("4_gboug")]
 position = Vector2(272, 240)
 
-[node name="Rain34" parent="." index="43" instance=ExtResource("4_gboug")]
+[node name="Rain34" parent="." index="42" instance=ExtResource("4_gboug")]
 position = Vector2(368, 272)
 
-[node name="Rain46" parent="." index="44" instance=ExtResource("4_gboug")]
+[node name="Rain46" parent="." index="43" instance=ExtResource("4_gboug")]
 position = Vector2(368, 240)
 
-[node name="Rain47" parent="." index="45" instance=ExtResource("4_gboug")]
+[node name="Rain47" parent="." index="44" instance=ExtResource("4_gboug")]
 position = Vector2(368, 272)
 
-[node name="Rain35" parent="." index="46" instance=ExtResource("4_gboug")]
+[node name="Rain35" parent="." index="45" instance=ExtResource("4_gboug")]
 position = Vector2(336, 272)
 
-[node name="Rain36" parent="." index="47" instance=ExtResource("4_gboug")]
+[node name="Rain36" parent="." index="46" instance=ExtResource("4_gboug")]
 position = Vector2(304, 272)
 
-[node name="Rain37" parent="." index="48" instance=ExtResource("4_gboug")]
+[node name="Rain37" parent="." index="47" instance=ExtResource("4_gboug")]
 position = Vector2(272, 272)
 
-[node name="Rain38" parent="." index="49" instance=ExtResource("4_gboug")]
+[node name="Rain38" parent="." index="48" instance=ExtResource("4_gboug")]
 position = Vector2(368, 304)
 
-[node name="Rain39" parent="." index="50" instance=ExtResource("4_gboug")]
+[node name="Rain39" parent="." index="49" instance=ExtResource("4_gboug")]
 position = Vector2(336, 304)
 
-[node name="Rain40" parent="." index="51" instance=ExtResource("4_gboug")]
+[node name="Rain40" parent="." index="50" instance=ExtResource("4_gboug")]
 position = Vector2(304, 304)
 
-[node name="Rain41" parent="." index="52" instance=ExtResource("4_gboug")]
+[node name="Rain41" parent="." index="51" instance=ExtResource("4_gboug")]
 position = Vector2(272, 304)
 
-[node name="Rain42" parent="." index="53" instance=ExtResource("4_gboug")]
+[node name="Rain42" parent="." index="52" instance=ExtResource("4_gboug")]
 position = Vector2(368, 336)
 
-[node name="Rain43" parent="." index="54" instance=ExtResource("4_gboug")]
+[node name="Rain43" parent="." index="53" instance=ExtResource("4_gboug")]
 position = Vector2(336, 336)
 
-[node name="Rain44" parent="." index="55" instance=ExtResource("4_gboug")]
+[node name="Rain44" parent="." index="54" instance=ExtResource("4_gboug")]
 position = Vector2(304, 336)
 
-[node name="Rain45" parent="." index="56" instance=ExtResource("4_gboug")]
+[node name="Rain45" parent="." index="55" instance=ExtResource("4_gboug")]
 position = Vector2(272, 336)
 
-[node name="Rain15" parent="." index="57" instance=ExtResource("4_gboug")]
+[node name="Rain15" parent="." index="56" instance=ExtResource("4_gboug")]
 position = Vector2(528, 240)
 
-[node name="Rain17" parent="." index="58" instance=ExtResource("4_gboug")]
+[node name="Rain17" parent="." index="57" instance=ExtResource("4_gboug")]
 position = Vector2(592, 272)
 
-[node name="Rain5" parent="." index="59" instance=ExtResource("4_gboug")]
+[node name="Rain5" parent="." index="58" instance=ExtResource("4_gboug")]
 position = Vector2(176, 432)
 
-[node name="Stick" parent="." index="60" instance=ExtResource("5_d4tc8")]
+[node name="Stick" parent="." index="59" instance=ExtResource("5_d4tc8")]
 position = Vector2(560, 464)
+
+[node name="Hero" parent="." index="60" instance=ExtResource("7_whnac")]
+position = Vector2(304, 432)

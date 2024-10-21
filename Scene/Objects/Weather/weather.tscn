@@ -36,5 +36,6 @@ scale_curve_y = SubResource("Curve_cou1h")
 stream = ExtResource("2_jjatl")
 volume_db = -30.298
 autoplay = true
+max_distance = 1000.0
 
 [connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
