@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://b7rb5co5d2bpu"]
+[gd_scene load_steps=11 format=3 uid="uid://b7rb5co5d2bpu"]
 
 [ext_resource type="Texture2D" uid="uid://n2kaoo5wrn0h" path="res://Assets/Hero/hero.png" id="1_5jb5a"]
 [ext_resource type="Script" path="res://Script/Hero/hero.gd" id="1_7s87e"]
-[ext_resource type="AudioStream" uid="uid://bk11t6rg108pj" path="res://Assets/Audio/Chop.wav" id="3_1ya5h"]
+[ext_resource type="Texture2D" uid="uid://dckrhdp6m6ay2" path="res://Assets/Hero/torch/torch.png" id="3_v1uwg"]
+[ext_resource type="AudioStream" uid="uid://ch6e18uitlcjy" path="res://Assets/Audio/Chop/chop.mp3" id="4_g586c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxjxf"]
-size = Vector2(32, 32)
+size = Vector2(16, 16)
 
 [sub_resource type="Gradient" id="Gradient_54o0u"]
 offsets = PackedFloat32Array(0, 0.96129)
@@ -59,6 +60,7 @@ _data = {
 
 [node name="Hero" type="CharacterBody2D"]
 z_index = 5
+collision_mask = 0
 script = ExtResource("1_7s87e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -68,10 +70,14 @@ shape = SubResource("RectangleShape2D_fxjxf")
 texture = ExtResource("1_5jb5a")
 hframes = 8
 
-[node name="TorchLight" type="PointLight2D" parent="Sprite2D"]
+[node name="Torch" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(6, -7)
+texture = ExtResource("3_v1uwg")
+
+[node name="TorchLight" type="PointLight2D" parent="Sprite2D/Torch"]
 unique_name_in_owner = true
+position = Vector2(-6, -1)
 color = Color(0.85098, 0.858824, 0.854902, 1)
-energy = 0.5
 shadow_enabled = true
 shadow_item_cull_mask = 3
 texture = SubResource("GradientTexture2D_f8rje")
@@ -88,4 +94,5 @@ collision_mask = 2
 collide_with_areas = true
 
 [node name="ChopSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_1ya5h")
+stream = ExtResource("4_g586c")
+volume_db = -5.001

@@ -1,0 +1,197 @@
+[gd_scene load_steps=9 format=3 uid="uid://dcxpaviwvmvw4"]
+
+[ext_resource type="PackedScene" uid="uid://cxjci7y7s4d07" path="res://Scene/Levels/base_level.tscn" id="1_n5g10"]
+[ext_resource type="PackedScene" uid="uid://dg24opoqgdsnl" path="res://Scene/Objects/People/people.tscn" id="2_7kvh4"]
+[ext_resource type="PackedScene" uid="uid://cb6u5clkbj7d5" path="res://Scene/Objects/Exit/exit.tscn" id="3_wl0hu"]
+[ext_resource type="PackedScene" uid="uid://bawmkwthnoo7a" path="res://Scene/Levels/Level7/level_7.tscn" id="4_cg4nr"]
+[ext_resource type="PackedScene" uid="uid://vgh1alvi4v25" path="res://Scene/Objects/Rain/rain.tscn" id="4_gboug"]
+[ext_resource type="PackedScene" uid="uid://lm1micaark0q" path="res://Scene/Objects/Stick/stick.tscn" id="5_d4tc8"]
+
+[sub_resource type="Gradient" id="Gradient_7xqj1"]
+colors = PackedColorArray(0.18002, 0.617227, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hf3yj"]
+gradient = SubResource("Gradient_7xqj1")
+width = 384
+height = 127
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.2)
+metadata/_snap_enabled = true
+
+[node name="Level6" instance=ExtResource("1_n5g10")]
+
+[node name="Hero" parent="." index="0"]
+position = Vector2(304, 432)
+
+[node name="DirectionalLight2D" parent="." index="2"]
+visible = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." index="6"]
+position = Vector2(320, 256)
+energy = 2.0
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_hf3yj")
+
+[node name="People" parent="." index="7" instance=ExtResource("2_7kvh4")]
+position = Vector2(304, 464)
+
+[node name="Exit" parent="." index="8" instance=ExtResource("3_wl0hu")]
+position = Vector2(368, 48)
+load_scene = ExtResource("4_cg4nr")
+
+[node name="Rain" parent="." index="9" instance=ExtResource("4_gboug")]
+position = Vector2(176, 368)
+
+[node name="Rain2" parent="." index="10" instance=ExtResource("4_gboug")]
+position = Vector2(112, 304)
+
+[node name="Rain51" parent="." index="11" instance=ExtResource("4_gboug")]
+position = Vector2(432, 400)
+
+[node name="Rain3" parent="." index="12" instance=ExtResource("4_gboug")]
+position = Vector2(176, 400)
+
+[node name="Rain6" parent="." index="13" instance=ExtResource("4_gboug")]
+position = Vector2(176, 144)
+
+[node name="Rain4" parent="." index="14" instance=ExtResource("4_gboug")]
+position = Vector2(176, 112)
+
+[node name="Rain13" parent="." index="15" instance=ExtResource("4_gboug")]
+position = Vector2(112, 176)
+
+[node name="Rain7" parent="." index="16" instance=ExtResource("4_gboug")]
+position = Vector2(112, 368)
+
+[node name="Rain8" parent="." index="17" instance=ExtResource("4_gboug")]
+position = Vector2(112, 400)
+
+[node name="Rain9" parent="." index="18" instance=ExtResource("4_gboug")]
+position = Vector2(208, 208)
+
+[node name="Rain10" parent="." index="19" instance=ExtResource("4_gboug")]
+position = Vector2(144, 272)
+
+[node name="Rain11" parent="." index="20" instance=ExtResource("4_gboug")]
+position = Vector2(48, 304)
+
+[node name="Rain12" parent="." index="21" instance=ExtResource("4_gboug")]
+position = Vector2(48, 176)
+
+[node name="Rain48" parent="." index="22" instance=ExtResource("4_gboug")]
+position = Vector2(176, 176)
+
+[node name="Rain49" parent="." index="23" instance=ExtResource("4_gboug")]
+position = Vector2(112, 144)
+
+[node name="Rain50" parent="." index="24" instance=ExtResource("4_gboug")]
+position = Vector2(144, 144)
+
+[node name="Rain14" parent="." index="25" instance=ExtResource("4_gboug")]
+position = Vector2(528, 208)
+
+[node name="Rain16" parent="." index="26" instance=ExtResource("4_gboug")]
+position = Vector2(496, 80)
+
+[node name="Rain18" parent="." index="27" instance=ExtResource("4_gboug")]
+position = Vector2(624, 80)
+
+[node name="Rain19" parent="." index="28" instance=ExtResource("4_gboug")]
+position = Vector2(624, 112)
+
+[node name="Rain20" parent="." index="29" instance=ExtResource("4_gboug")]
+position = Vector2(624, 144)
+
+[node name="Rain21" parent="." index="30" instance=ExtResource("4_gboug")]
+position = Vector2(528, 80)
+
+[node name="Rain22" parent="." index="31" instance=ExtResource("4_gboug")]
+position = Vector2(368, 176)
+
+[node name="Rain23" parent="." index="32" instance=ExtResource("4_gboug")]
+position = Vector2(336, 176)
+
+[node name="Rain24" parent="." index="33" instance=ExtResource("4_gboug")]
+position = Vector2(304, 176)
+
+[node name="Rain25" parent="." index="34" instance=ExtResource("4_gboug")]
+position = Vector2(272, 176)
+
+[node name="Rain26" parent="." index="35" instance=ExtResource("4_gboug")]
+position = Vector2(368, 208)
+
+[node name="Rain27" parent="." index="36" instance=ExtResource("4_gboug")]
+position = Vector2(336, 208)
+
+[node name="Rain28" parent="." index="37" instance=ExtResource("4_gboug")]
+position = Vector2(304, 208)
+
+[node name="Rain29" parent="." index="38" instance=ExtResource("4_gboug")]
+position = Vector2(272, 208)
+
+[node name="Rain30" parent="." index="39" instance=ExtResource("4_gboug")]
+position = Vector2(368, 240)
+
+[node name="Rain31" parent="." index="40" instance=ExtResource("4_gboug")]
+position = Vector2(336, 240)
+
+[node name="Rain32" parent="." index="41" instance=ExtResource("4_gboug")]
+position = Vector2(304, 240)
+
+[node name="Rain33" parent="." index="42" instance=ExtResource("4_gboug")]
+position = Vector2(272, 240)
+
+[node name="Rain34" parent="." index="43" instance=ExtResource("4_gboug")]
+position = Vector2(368, 272)
+
+[node name="Rain46" parent="." index="44" instance=ExtResource("4_gboug")]
+position = Vector2(368, 240)
+
+[node name="Rain47" parent="." index="45" instance=ExtResource("4_gboug")]
+position = Vector2(368, 272)
+
+[node name="Rain35" parent="." index="46" instance=ExtResource("4_gboug")]
+position = Vector2(336, 272)
+
+[node name="Rain36" parent="." index="47" instance=ExtResource("4_gboug")]
+position = Vector2(304, 272)
+
+[node name="Rain37" parent="." index="48" instance=ExtResource("4_gboug")]
+position = Vector2(272, 272)
+
+[node name="Rain38" parent="." index="49" instance=ExtResource("4_gboug")]
+position = Vector2(368, 304)
+
+[node name="Rain39" parent="." index="50" instance=ExtResource("4_gboug")]
+position = Vector2(336, 304)
+
+[node name="Rain40" parent="." index="51" instance=ExtResource("4_gboug")]
+position = Vector2(304, 304)
+
+[node name="Rain41" parent="." index="52" instance=ExtResource("4_gboug")]
+position = Vector2(272, 304)
+
+[node name="Rain42" parent="." index="53" instance=ExtResource("4_gboug")]
+position = Vector2(368, 336)
+
+[node name="Rain43" parent="." index="54" instance=ExtResource("4_gboug")]
+position = Vector2(336, 336)
+
+[node name="Rain44" parent="." index="55" instance=ExtResource("4_gboug")]
+position = Vector2(304, 336)
+
+[node name="Rain45" parent="." index="56" instance=ExtResource("4_gboug")]
+position = Vector2(272, 336)
+
+[node name="Rain15" parent="." index="57" instance=ExtResource("4_gboug")]
+position = Vector2(528, 240)
+
+[node name="Rain17" parent="." index="58" instance=ExtResource("4_gboug")]
+position = Vector2(592, 272)
+
+[node name="Rain5" parent="." index="59" instance=ExtResource("4_gboug")]
+position = Vector2(176, 432)
+
+[node name="Stick" parent="." index="60" instance=ExtResource("5_d4tc8")]
+position = Vector2(560, 464)

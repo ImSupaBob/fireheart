@@ -10,5 +10,5 @@ func _ready():
 
 func _on_body_entered(body : Node2D):
 	await get_tree().create_timer(2).timeout 
-	if body is Hero:
+	if body is Hero or body is Hero2:
 		get_tree().change_scene_to_packed(load_scene)

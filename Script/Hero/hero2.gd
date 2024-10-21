@@ -1,35 +1,17 @@
-class_name Hero
+class_name Hero2
 extends CharacterBody2D
 
 @onready var tile_map : TileMap = $"../TileMap"
 @onready var sprite_2d = $Sprite2D
 @onready var ray_cast_2d = $RayCast2D
 @onready var chop_sound = $ChopSound
-@onready var torch_light = %TorchLight
-
-@export var torch_durability : int = 3
+@onready var animation_player = $AnimationPlayer
 
 var is_moving = false
 
 func _ready():
-	_up_date_torch_durability()
-
-func decrease_torch_durability():
-	if torch_durability > 0:
-		torch_durability -= 1
-		_up_date_torch_durability()
-		if torch_durability == 0:
-			game_over()
-	elif torch_durability <= 0:
-		game_over()
-
-func set_torch_durability(value : int):
-	torch_durability = value
-	_up_date_torch_durability()
-
-func game_over():
 	await get_tree().create_timer(2).timeout 
-	get_tree().reload_current_scene()
+	animation_player.play("heart")
 
 func _physics_process(delta):
 	if not is_moving:
@@ -42,8 +24,6 @@ func _physics_process(delta):
 	sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 2)
 
 func _process(delta):
-	if torch_durability <= 0:
-		return
 	
 	if is_moving:
 		return
@@ -87,6 +67,3 @@ func move(direction: Vector2):
 	global_position = tile_map.map_to_local(target_tile)
 	
 	sprite_2d.global_position = tile_map.map_to_local(current_tile)
-
-func _up_date_torch_durability():
-	torch_light.texture_scale = torch_durability

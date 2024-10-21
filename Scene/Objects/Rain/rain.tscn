@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://vgh1alvi4v25"]
+[gd_scene load_steps=4 format=3 uid="uid://vgh1alvi4v25"]
+
+[ext_resource type="Script" path="res://Script/Objects/Rain/rain.gd" id="1_7gr48"]
 
 [sub_resource type="Curve" id="Curve_aqkus"]
 min_value = 2.0
@@ -10,6 +12,8 @@ point_count = 1
 size = Vector2(32, 32)
 
 [node name="Rain" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_7gr48")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 modulate = Color(0.0666667, 0.164706, 0.278431, 0.752941)
@@ -18,7 +22,7 @@ visibility_layer = 2
 z_index = 10
 position = Vector2(0, -512)
 scale = Vector2(1.24, 1.2)
-amount = 500
+amount = 100
 lifetime = 1.5
 randomness = 1.0
 emission_shape = 3
@@ -37,3 +41,5 @@ shape = SubResource("RectangleShape2D_8tqc8")
 z_index = 1
 color = Color(0.145098, 0.141176, 0.243137, 1)
 polygon = PackedVector2Array(16, -16, -16, -16, -16, 16, 16, 16)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

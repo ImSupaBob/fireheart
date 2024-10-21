@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://djvjjf0ixynn"]
+
+[ext_resource type="PackedScene" uid="uid://cxjci7y7s4d07" path="res://Scene/Levels/base_level.tscn" id="1_i6rpe"]
+[ext_resource type="PackedScene" uid="uid://vgh1alvi4v25" path="res://Scene/Objects/Rain/rain.tscn" id="2_srrvc"]
+[ext_resource type="PackedScene" uid="uid://dg24opoqgdsnl" path="res://Scene/Objects/People/people.tscn" id="3_hy610"]
+[ext_resource type="PackedScene" uid="uid://cb6u5clkbj7d5" path="res://Scene/Objects/Exit/exit.tscn" id="4_1ukvc"]
+[ext_resource type="PackedScene" uid="uid://lm1micaark0q" path="res://Scene/Objects/Stick/stick.tscn" id="5_c0fwx"]
+[ext_resource type="PackedScene" uid="uid://dcxpaviwvmvw4" path="res://Scene/Levels/Level6/level_6.tscn" id="5_nak46"]
+[ext_resource type="PackedScene" uid="uid://cnw0wfmvsn0es" path="res://Scene/Objects/Tree/tree.tscn" id="6_bm6k2"]
+
+[node name="Level5" instance=ExtResource("1_i6rpe")]
+
+[node name="Hero" parent="." index="0"]
+position = Vector2(400, 400)
+
+[node name="DirectionalLight2D" parent="." index="2"]
+visible = true
+
+[node name="Rain" parent="." index="6" instance=ExtResource("2_srrvc")]
+position = Vector2(432, 336)
+
+[node name="Rain3" parent="." index="7" instance=ExtResource("2_srrvc")]
+position = Vector2(176, 144)
+
+[node name="Rain4" parent="." index="8" instance=ExtResource("2_srrvc")]
+position = Vector2(176, 176)
+
+[node name="Rain2" parent="." index="9" instance=ExtResource("2_srrvc")]
+position = Vector2(464, 336)
+
+[node name="People" parent="." index="10" instance=ExtResource("3_hy610")]
+position = Vector2(400, 432)
+
+[node name="Exit" parent="." index="11" instance=ExtResource("4_1ukvc")]
+position = Vector2(432, 80)
+load_scene = ExtResource("5_nak46")
+
+[node name="Stick" parent="." index="12" instance=ExtResource("5_c0fwx")]
+position = Vector2(304, 432)
+
+[node name="Tree" parent="." index="13" instance=ExtResource("6_bm6k2")]
+position = Vector2(400, 272)
+
+[node name="Tree2" parent="." index="14" instance=ExtResource("6_bm6k2")]
+position = Vector2(112, 240)
+
+[node name="Tree3" parent="." index="15" instance=ExtResource("6_bm6k2")]
+position = Vector2(144, 272)
+
+[node name="Tree4" parent="." index="16" instance=ExtResource("6_bm6k2")]
+position = Vector2(144, 240)
+
+[node name="Tree5" parent="." index="17" instance=ExtResource("6_bm6k2")]
+position = Vector2(176, 336)
+
+[node name="Tree6" parent="." index="18" instance=ExtResource("6_bm6k2")]
+position = Vector2(240, 432)
+
+[node name="Tree7" parent="." index="19" instance=ExtResource("6_bm6k2")]
+position = Vector2(176, 400)

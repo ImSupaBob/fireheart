@@ -1,0 +1,172 @@
+[gd_scene load_steps=13 format=3 uid="uid://cdjxior1mio7g"]
+
+[ext_resource type="Script" path="res://Script/Hero/hero2.gd" id="1_lplar"]
+[ext_resource type="Texture2D" uid="uid://cwwurabn7cixm" path="res://Assets/Hero/hero2.png" id="2_f3jgj"]
+[ext_resource type="AudioStream" uid="uid://ch6e18uitlcjy" path="res://Assets/Audio/Chop/chop.mp3" id="4_modo1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxjxf"]
+size = Vector2(16, 16)
+
+[sub_resource type="Gradient" id="Gradient_ard02"]
+colors = PackedColorArray(0.776334, 0, 0.145148, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fyvol"]
+gradient = SubResource("Gradient_ard02")
+width = 8
+height = 8
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_cagyx"]
+colors = PackedColorArray(0.972549, 0.0745098, 0.160784, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p7cnw"]
+gradient = SubResource("Gradient_cagyx")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+metadata/_snap_enabled = true
+
+[sub_resource type="Animation" id="Animation_pv3jb"]
+resource_name = "Idel"
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_lukl0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PointLight2D:enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PointLight2D2:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2m6p8"]
+resource_name = "heart"
+length = 0.40001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PointLight2D:enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PointLight2D2:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ayesi"]
+_data = {
+"Idel": SubResource("Animation_pv3jb"),
+"RESET": SubResource("Animation_lukl0"),
+"heart": SubResource("Animation_2m6p8")
+}
+
+[node name="Hero2" type="CharacterBody2D"]
+z_index = 5
+collision_mask = 0
+script = ExtResource("1_lplar")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fxjxf")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1, 2)
+energy = 4.0
+texture = SubResource("GradientTexture2D_fyvol")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+enabled = false
+energy = 3.0
+texture = SubResource("GradientTexture2D_p7cnw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_f3jgj")
+hframes = 5
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ayesi")
+}
+autoplay = "Idel"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 16)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="ChopSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_modo1")
+volume_db = -5.001

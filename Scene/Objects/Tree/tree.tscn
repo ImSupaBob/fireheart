@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cnw0wfmvsn0es"]
 
 [ext_resource type="Script" path="res://Script/Objects/Tree/tree.gd" id="1_wnmir"]
-[ext_resource type="Texture2D" uid="uid://53qafj3ghi23" path="res://Assets/Tree/WoodenTree.png" id="2_nlawy"]
+[ext_resource type="Texture2D" uid="uid://chcyj57dc7wvh" path="res://Assets/Tree/Wood.png" id="2_hthjc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5euor"]
 size = Vector2(32, 32)
@@ -17,5 +17,4 @@ script = ExtResource("1_wnmir")
 shape = SubResource("RectangleShape2D_5euor")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -16)
-texture = ExtResource("2_nlawy")
+texture = ExtResource("2_hthjc")
