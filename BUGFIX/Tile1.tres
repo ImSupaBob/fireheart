@@ -1,0 +1,41 @@
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://c5a0s2uhaxvx7"]
+
+[ext_resource type="Texture2D" uid="uid://dq1k5oislj0d6" path="res://Assets/Tiles/tiles.png" id="1_7xjsc"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fpa7b"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ywyon"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pjci6"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ijkrk"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3rbnq"]
+texture = ExtResource("1_7xjsc")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/custom_data_0 = true
+1:0/0 = 0
+1:0/0/custom_data_0 = true
+2:0/0 = 0
+2:0/0/custom_data_0 = true
+3:0/0 = 0
+0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_fpa7b")
+1:1/0 = 0
+1:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ywyon")
+3:1/0 = 0
+3:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ijkrk")
+2:1/0 = 0
+2:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_pjci6")
+
+[resource]
+tile_size = Vector2i(32, 32)
+occlusion_layer_0/light_mask = 1
+custom_data_layer_0/name = "walkable"
+custom_data_layer_0/type = 1
+sources/0 = SubResource("TileSetAtlasSource_3rbnq")
